@@ -6,22 +6,20 @@
 
 ## step 2
 ### up:
-	I) running docker-compose.yml and Dockerfile
-	II) creating mysql connection with php and printing the client and server version
+	Running docker-compose.yml and Dockerfile
+	Creating mysql connection with php and printing the client and server version
 
 ## step 3
 ### down:
-	I) stoping all running containers
-	II) storing all usefull files in ~/docker/*
+	Stoping all running containers
+	Storing all usefull files in <your_current_directory_path>/docker/*
 
 ## step 4
 ### teardown:
-	I) deleting all file present in ~/docker/*
+	Deleting all file present in <your_current_directory_path>/docker/*
 
-1) to begin with it just run make in this folder
-2) run "localhost:3000" in your browser ( RUNNING SQL SERVER TAKES TIME )
-3) you may check its status by "docker logs db -f" press CTRL+C to exit
-4) after 2-3 mint delay, at "localhost:3000" will print client-server version 
-
-5) for testing purpose step 1 and step 2 will run
-6) you can add all step in "makefile" by this "all: up teardown"
+1) To begin with it just run <code>make</code> in this folder. it will do everything automatically.
+2) <b>RUNNING SQL SERVER TAKES TIME</b> You can check its status by <code>docker logs db -f</code> press CTRL+C to exit.
+3) After SQL server is ready to connect, at <a href="http://localhost:3000"><code>localhost:3000</code></a> will print client-server version.
+4) For testing purpose step 1 and step 2 will run by default.
+5) you can add all step in <b>makefile</b> by <code>all: up teardown</code>
