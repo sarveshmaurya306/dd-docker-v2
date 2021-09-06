@@ -18,8 +18,6 @@ up: prepare
 	fi
 	@sudo cp ./index.php ./docker/www/;
 	@sudo docker-compose up -d
-	@echo "\n------------------wating for 20 seconds--------------------\n"
-	#@sleep 20
 	@echo "\n----------------------------------------------------------- \n"
 teardown: down
 	@echo "\n------------------removing your files----------------------\n"
